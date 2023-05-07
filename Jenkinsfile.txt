@@ -7,5 +7,11 @@ pipeline {
                 git 'https://github.com/arthurvillaca2020/HotelLucena.git'
             }
         }
+        stage('Build') {
+            agent {
+                // Clona o repositório do GitHub
+                docker { image 'maven' }
+            }
+        }
     }
 }
