@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                // Clona o repositório do GitHub
+                git 'https://github.com/arthurvillaca2020/HotelLucena.git'
+            }
+        }
+    }
+}
