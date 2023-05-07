@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             agent {
                 // Clona o repositório do GitHub
-                docker { image 'maven' }
+                any { image 'maven' }
             }
         }
     }
