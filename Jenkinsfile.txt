@@ -7,12 +7,6 @@ pipeline {
                 git 'https://github.com/tassioferenzini/Hotel_Lucena.git'
             }
         }
-        stage('Build') {
-            steps {
-                // Executa o comando Maven para compilar o projeto
-                sh 'mvn clean package'
-            }
-        }
          stage('Test') {
             steps {
                 // Executa os testes unitários
