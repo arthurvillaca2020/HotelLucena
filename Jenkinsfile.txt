@@ -1,16 +1,18 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:12-alpine'
+        }
+    }
     stages {
-        stage('Checkout') {
+        stage('Build') {
             steps {
-                // Clona o repositório do GitHub
-                git 'https://github.com/arthurvillaca2020/HotelLucena.git'
+                sh 'npm install'
             }
         }
-        stage('Build') {
-            agent {
-                // Clona o repositório do GitHub
-                docker { image 'maven' }
+        stage('Test') {
+            steps {
+                sh 'npm run test'
             }
         }
     }
