@@ -1,10 +1,10 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                https://github.com/arthurvillaca2020/HotelLucena
+                // Clona o repositório do GitHub
+                git 'https://github.com/tassioferenzini/Hotel_Lucena.git'
             }
         }
     }
