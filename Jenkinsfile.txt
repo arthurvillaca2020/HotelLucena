@@ -4,19 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Adicione aqui os comandos para construir o seu aplicativo
-            }
-        }
-
-        stage('Test') {
-            steps {
-                // Adicione aqui os comandos para testar o seu aplicativo
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                // Adicione aqui os comandos para implantar o seu aplicativo
+                https://github.com/arthurvillaca2020/HotelLucena
             }
         }
     }
